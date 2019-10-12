@@ -1,0 +1,25 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\flash.o"
+".\objects\usart.o"
+".\objects\jump_to_app.o"
+".\objects\check.o"
+".\objects\iap_data.o"
+".\objects\modbus.o"
+".\objects\gpio.o"
+".\objects\timer.o"
+".\objects\display.o"
+".\objects\config.o"
+".\objects\startup_stm32f070xb.o"
+".\objects\stm32f0xx_rcc.o"
+".\objects\stm32f0xx_usart.o"
+".\objects\stm32f0xx_tim.o"
+".\objects\system_stm32f0xx.o"
+".\objects\stm32f0xx_gpio.o"
+".\objects\stm32f0xx_flash.o"
+".\objects\stm32f0xx_misc.o"
+".\objects\stm32f0xx_syscfg.o"
+--strict --scatter ".\Objects\bootloader.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\bootloader.map" -o .\Objects\bootloader.axf
